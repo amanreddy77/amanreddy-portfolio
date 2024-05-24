@@ -1,0 +1,125 @@
+.About {
+    padding: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            .image {
+                height: 400px !important;
+            }
+            .col-2 {
+                height: 400px !important;
+            }
+            .text {
+                min-height: 400px;
+                padding: 2rem !important;
+            }
+        }
+        @media (max-width: 400px) {
+            .text {
+                padding: 2rem !important;
+            }
+        }
+        .image {
+            width: 100%;
+            height: 600px;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        h1 {
+            line-height: 1;
+        }
+        span {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+        .text {
+            background-color: var(--bgsb);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-details {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+.About {
+    .container-2 {
+        gap: 2rem;
+        width: 100%;
+        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .col-1 {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            flex-direction: column;
+            gap: 2rem;
+            .item {
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+                background-color: var(--bgsb);
+                padding: 2rem;
+                border-radius: 1rem;
+                transition: all 0.4s ease-in-out;
+                &:hover {
+                    background-color: #9e9e9e3a;
+                }
+                .text-2 {
+                    width: 85%;
+                    h3 {
+                        margin-bottom: 1rem;
+                    }
+                }
+                .CircleIco {
+                    white-space: nowrap;
+                }
+            }
+        }
+        .col-2 {
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover {
+                img {
+                    scale: 1.09;
+                }
+            }
+        }
+    }
+}
+
+.heading1 {
+    transition: text-shadow 0.4s ease-in-out;
+    /* Set initial text-shadow */
+    text-shadow: none;
+}
+
+.heading1:hover {
+    text-shadow: 5px 5px 10px rgb(255, 208, 0);
+}

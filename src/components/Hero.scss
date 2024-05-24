@@ -1,0 +1,102 @@
+.hero {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    p {
+        color: #fff;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        min-height: calc(100vh - 85px);
+        border-radius: 0.5rem;
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url("https://images.unsplash.com/photo-1546900703-cf06143d1239?q=80&w=2900&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .text {
+            position: absolute;
+            bottom: 2rem;
+            left: 1rem;
+            width: 100%;
+            h1 {
+                font-size: 10rem;
+                line-height: 1;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: 2rem;
+                max-width: 800px;
+            }
+            &-desc {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 2rem;
+                gap: 2rem;
+                button {
+                    white-space: nowrap;
+                }
+            }
+            .typing-effect {
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 2px solid;
+                animation: typing 4s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+                color: rgb(255, 232, 23);
+            }
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width: 610px) {
+    .hero {
+        .container {
+            .text {
+                h1 {
+                    font-size: 9rem;
+                    margin-bottom: 2rem;
+                }
+                &-desc {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        .container {
+            .text {
+                h1 {
+                    font-size: 7rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
