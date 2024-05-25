@@ -22,12 +22,24 @@ SecondaryBtn.defaultProps = {
   onClick: () => {},
 };
 
-const PrimaryBtn = ({ text }) => {
-  return <button className="btn-p">{text}</button>;
+const PrimaryBtn = ({ text, scrollTo }) => {
+  const handleClick = () => {
+    const element = document.getElementById(scrollTo);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <button className="btn-p" onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
 PrimaryBtn.propTypes = {
   text: PropTypes.string.isRequired,
+  scrollTo: PropTypes.string.isRequired,
 };
 
 export { PrimaryBtn, SecondaryBtn };

@@ -16,9 +16,9 @@ const companyLogo = [
   db,
 ];
 
-const CompanyLogos = () => {
+const Logos = () => {
   return (
-    <div className="companylogos">
+    <div className="logos">
       <div className="container">
         {companyLogo.map((elem, index) => (
           <img src={elem} alt={index} key={index} />
@@ -28,4 +28,4 @@ const CompanyLogos = () => {
   );
 };
 
-export default CompanyLogos;
+export default Logos;

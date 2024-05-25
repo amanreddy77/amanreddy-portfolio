@@ -37,7 +37,7 @@ const About = () => {
   };
   
   return (
-    <div className="About">
+    <div className="About" id="about">
       <div className="container">
         <div className="image">
           <img className="biopic"
@@ -45,7 +45,7 @@ const About = () => {
             alt="about image"
           />
         </div>
-        <div className="text">
+        <div className="text" >
           <span>ABout</span>
           <div className="text-details">
             <h1>Skills and Technologies</h1>
@@ -59,7 +59,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <h1 className="heading1" style={{textAlign:"center"}}>Experience</h1>
+      <h1 className="heading1" style={{textAlign:"center"}} id="experience">Experience</h1>
       <div className="container container-2">
         <div className="col-1">
           {data.map((elem, index) => (
