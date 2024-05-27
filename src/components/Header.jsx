@@ -7,11 +7,19 @@ const headerMenu = [
   { name: "Projects", id: "projects" },
   { name: "Experience", id: "experience" },
   { name: "About", id: "about" },
-  { name: "Blog", id: "blog" }
+  { name: "Blog", id: "blog", url: "https://medium.com/p/47e1b51b6e83" }
 ];
 
 const Header = () => {
   const [active, setActive] = useState(false);
+
+  const handleMenuClick = (elem) => {
+    if (elem.url) {
+      window.location.href = elem.url;
+    } else {
+      setActive(false); // Close the menu if it's a scroll link
+    }
+  };
 
   return (
     <div className="header">
@@ -22,14 +30,23 @@ const Header = () => {
           <ul>
             {headerMenu.map((elem, index) => (
               <li key={index}>
-                <ScrollLink
-                  to={elem.id}
-                  smooth={true}
-                  duration={500}
-                  onClick={() => setActive(false)}
-                >
-                  {elem.name}
-                </ScrollLink>
+                {elem.url ? (
+                  <a
+                    href={elem.url}
+                    onClick={() => handleMenuClick(elem)}
+                  >
+                    {elem.name}
+                  </a>
+                ) : (
+                  <ScrollLink
+                    to={elem.id}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => handleMenuClick(elem)}
+                  >
+                    {elem.name}
+                  </ScrollLink>
+                )}
               </li>
             ))}
           </ul>
@@ -39,14 +56,14 @@ const Header = () => {
               scrollTo="contact"
               onClick={() => setActive(false)}
             />
-            <div
-              className={active ? `hamburger active` : `hamburger`}
-              onClick={() => setActive(!active)}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+          </div>
+          <div
+            className={active ? `hamburger active` : `hamburger`}
+            onClick={() => setActive(!active)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
