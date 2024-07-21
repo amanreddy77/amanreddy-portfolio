@@ -6,20 +6,22 @@ import WhatsApp from "../images/IMG_20201224_101306_120.jpg"
 
 const data = [
   {
-    text: "IBM Skill Build (Edunet Foundation) Intern ",
-    desc: "IBM AI and Cloud Internship Virtual Sessions: Participated in virtual sessions covering topics such as registration in IBM, cloud computing, artificial intelligence, and data analytics.Hands-On Learning: Engaged in practical sessions including data analytics hands-on exercises and cloud-based exploratory data analysis (EDA). Chat Bot Development: Learned about chatbot development using AI technologies, including problem statement explanation in machine learning (ML) and cloud-based experiments.",
-    certificate: "https://drive.google.com/file/d/187LxdMo21A42Dy0lT4CLNzjtOzRjmato/view?usp=sharing"
+    text: "Frontend Developer at HealthPulse Connect",
+    desc: "converting Figma designs into real-world web applications using React.js, Tailwindcss and integrating functional requirements like chatbot assistants, I also worked on integrating the video calling system into the web app using ZegoCloud started with an idea and created a web app with full functionalities and features that could fit into the real world in which my contribution was part of the project.",
+    certificate:"https://drive.google.com/file/d/1G6a-prWdgaVdjTdJT7IGw1k47yWyTny0/view?usp=sharing"
   },
+  {
+  text: "IBM Skill Build (Edunet Foundation) Intern ",
+  desc: "IBM AI and Cloud Internship Virtual Sessions: Participated in virtual sessions covering topics such as registration in IBM, cloud computing, artificial intelligence, and data analytics.Hands-On Learning: Engaged in practical sessions including data analytics hands-on exercises and cloud-based exploratory data analysis (EDA). Chat Bot Development: Learned about chatbot development using AI technologies, including problem statement explanation in machine learning (ML) and cloud-based experiments.",
+  certificate: "https://drive.google.com/file/d/187LxdMo21A42Dy0lT4CLNzjtOzRjmato/view?usp=sharing"
+},
   {
     text: "Chegg India Pvt. Ltd. Freelancer",
     desc: "I worked as an expert chegg problem solver, where I used to solve a various kinds of computer science problems related to Operating systems computer languages like C, Python, Java and more",
    certificate:"https://drive.google.com/file/d/1A-e2rM_3Xytnn7KGo0YpmWb1xlY1Dq9J/view?usp=sharing"
   },
-  {
-    text: "Data Analytics and Visualization Job Simulation",
-    desc: "completing a Data Analytics and Visualization training simulator. This interactive demonstration ranged from doing the data manipulation of the end users, including the displaying and sentencing, from March 2024.The key areas of focus included: The key areas of focus included: Project Understanding: I stand to gain better clarity of the structure, objective, and needs of the data projects I have been commissioned upon. Data Cleaning & Modeling: Data analysis involves using approaches that prepare and harmonize data to be analyzed.",
-    certificate:"https://drive.google.com/file/d/1ihhiMQeQrksQTWwnmyigr9tDNl1v-JIP/view?usp=sharing"
-  },
+  
+    
   
 ];
 

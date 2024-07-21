@@ -17,7 +17,7 @@ const data = [
     text: "Ai chatbot",
     tag: "Ai-integration",
     img: ai,
-    // url:""
+    url:""
   },
   {
     text: "Dashboard of Data representation",

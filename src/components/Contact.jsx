@@ -37,7 +37,7 @@ const socialData = [
     },
     text: "Resume",
     desc: "Here's My Resume filled with my passion that leads my life",
-    url: "https://drive.google.com/file/d/1367OrUwg8Gm6vRyoN1MZgWNEGvqMLD8e/view?usp=sharing", // Replace with your resume URL or file path
+    url: "https://drive.google.com/file/d/1yACaNIdjn5eHaxHjqW5hxmARxG5TeXd5/view?usp=sharing", 
   },
 ];
 
