@@ -4,7 +4,9 @@ import "./Projects.scss";
 import Dashboard from '../images/Dashboard.png';
 import ecom from '../images/ecom.png';
 import certi from '../images/certi.png';
-import ai from '../images/ai.png';
+// import ai from '../images/ai.png';
+import aichat from '../images/aichat.png'
+
 
 const data = [
   {
@@ -14,10 +16,11 @@ const data = [
     url:"https://github.com/amanreddy77/e-commerse"
   },
   {
-    text: "Ai chatbot",
+    text: "Private Ai chatbot",
     tag: "Ai-integration",
-    img: ai,
-    url:""
+    img: aichat,
+    url: "https://github.com/amanreddy77/open-webui_pro",
+    
   },
   {
     text: "Dashboard of Data representation",
