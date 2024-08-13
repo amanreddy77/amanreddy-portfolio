@@ -48,15 +48,15 @@ const About = () => {
           />
         </div>
         <div className="text" >
-          <span>ABout</span>
+          <span className="about-h">ABOUT</span>
           <div className="text-details">
             <h1>Skills and Technologies</h1>
             <p>
               
-<pre style={{color:"yellow"}}>Programming Languages: </pre>c, Java, HTML, CSS, Python, Javascript, Artificial Intelligence, Data visualization, Data Analytics,SQL
-<pre style={{ color: "yellow" }}>Libraries/Frameworks:</pre> React.js, Node.js, Express.js, TailWind CSS, Saas, Next.js, Bootstrap, Firebase.
-<pre style={{ color: "yellow" }}>Tools / Platforms:</pre> Visual studio,kaali Linux, Streamlit, Langchain, llama, Figma.
-<pre style={{ color: "yellow" }}>Databases:</pre>MySQL, MongoDB.
+<pre style={{color: "red"}}>Programming Languages: </pre>c, Java, HTML, CSS, Python, Javascript, Artificial Intelligence, Data visualization, Data Analytics,SQL
+<pre style={{ color:"red" }}>Libraries/Frameworks:</pre> React.js, Node.js, Express.js, TailWind CSS, Saas, Next.js, Bootstrap, Firebase.
+<pre style={{ color:"red" }}>Tools / Platforms:</pre> Visual studio,kaali Linux, Streamlit, Langchain, llama, Figma.
+<pre style={{ color:"red" }}>Databases:</pre>MySQL, MongoDB.
             </p>
           </div>
         </div>

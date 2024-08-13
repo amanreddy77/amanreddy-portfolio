@@ -7,7 +7,7 @@ const headerMenu = [
   { name: "Projects", id: "projects" },
   { name: "Experience", id: "experience" },
   { name: "About", id: "about" },
-  { name: "Blog", id: "blog", url: "https://medium.com/p/47e1b51b6e83" }
+  { name: "Blog", id: "blog", url: "https://medium.com/@reddyaman77.ar" }
 ];
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
     if (elem.url) {
       window.location.href = elem.url;
     } else {
-      setActive(false); // Close the menu if it's a scroll link
+      setActive(false); // Closing the menu if it's a scroll link
     }
   };
 

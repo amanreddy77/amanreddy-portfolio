@@ -81,6 +81,7 @@
         white-space: nowrap;
     }
     h2 {
+        font-family: "Roboto Mono", monospace;
         font-size: 4rem;
         text-transform: uppercase;
         font-weight: 500;
@@ -97,5 +98,5 @@
 }
 
 .main-text:hover {
-    text-shadow: 5px 5px 10px rgb(255, 208, 0);
+    text-shadow: 5px 5px 10px rgb(197, 0, 0);
 }

@@ -25,6 +25,7 @@
                 height: 400px !important;
             }
             .text {
+                font-family: "Roboto Mono", monospace;
                 min-height: 400px;
                 padding: 2rem !important;
             }
@@ -42,6 +43,8 @@
         }
         h1 {
             line-height: 1;
+            padding-bottom: 50px;
+            width: 80%;
         }
         span {
             font-size: 1.4rem;
@@ -115,11 +118,17 @@
 }
 
 .heading1 {
+    font-family: "Roboto Mono", monospace;
     transition: text-shadow 0.4s ease-in-out;
     /* Set initial text-shadow */
     text-shadow: none;
 }
 
 .heading1:hover {
-    text-shadow: 5px 5px 10px rgb(255, 208, 0);
+    text-shadow: 5px 5px 10px rgb(195, 0, 0);
+}
+
+.about-h,
+h1 {
+    font-family: "Roboto Mono", "monospace";
 }

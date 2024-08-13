@@ -42,46 +42,76 @@ const socialData = [
 ];
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
   const [showSnack, setShowSnack] = useState(false);
   const [snackMessage, setSnackMessage] = useState("");
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Get form data
-    const formData = new FormData(event.target);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
-
-    // Send email using emailjs
     emailjs
-      .sendForm("service_qde1hol", "template_r573pza", event.target, "3qdcnh_91zAC7qEV8", { name, email, message })
+      .sendForm("service_qde1hol", "template_r573pza", event.target, "3qdcnh_91zAC7qEV8")
       .then((result) => {
-        console.log("Email sent successfully", result.text);
+        window.alert("Email sent successfully", result.text);
         setSnackMessage("Details sent successfully!"); // Set the snack message
         setShowSnack(true); // Show the snack
         setTimeout(() => {
-          setShowSnack(false); // Hide the snack after 3 seconds
+          setShowSnack(true); // Hide the snack after 3 seconds
         }, 2000);
-        // Optionally, you can show a success message to the user or redirect them to a thank you page
+
+        // Clear the form fields
+        setFormData({
+          name: "",
+          email: "",
+          message: ""
+        });
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        // Optionally, you can show an error message to the user
+        
       });
   };
 
   return (
-    
     <div className="Contact" id="contact">
       <div className="container-1">
         <span>Contact</span>
         <div className="text">
           <form className="contact-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
             <button type="submit" className="btn-s">
               Get In Touch
               <CircleIcon />
@@ -129,7 +159,7 @@ const Contact = () => {
         ))}
       </div>
 
-      {/* Snack to indicate successful submission */}
+    
       {showSnack && (
         <div className="snack">
           {snackMessage}
