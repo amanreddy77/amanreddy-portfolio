@@ -5,7 +5,7 @@ import { SecondaryBtn } from "./Btn";
 const phrases = [
   "Hi, my name is Aman, I'm a Web Developer!",
   "Hi, my name is Aman, I'm a UI Designer!",
-  "Hi, my name is Aman, I'm a MERN Stack Developer"
+  "Hi, my name is Aman, I'm a MERN Stack Developer!"
 ];
 
 const Hero = () => {
