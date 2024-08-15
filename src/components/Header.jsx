@@ -24,8 +24,8 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <h1 className="logo">Aman Reddy </h1>
-        <h1 className="logo">s/o Srinivas Reddy </h1>
+        <h1 className="logo">Aman Reddy</h1>
+        <h1 className="logo">s/o Srinivas Reddy</h1>
         <div className={active ? `nav active` : `nav`}>
           <ul>
             {headerMenu.map((elem, index) => (

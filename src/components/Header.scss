@@ -12,49 +12,51 @@
             color: rgb(254, 254, 254);
             text-shadow: 2px 3px 3px rgb(190, 13, 0);
         }
-        .nav {
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.6rem;
+        ul {
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 1.6rem;
-            ul {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                li {
-                    font-family: "Roboto Mono", monospace;
-                    background-color: var(--bgw);
-                    padding: 1rem 2rem;
-                    border-radius: 0.5rem;
-                    color: rgb(0, 0, 0);
-                    transition: background-color 0.3s ease, color 0.3s ease;
-                    &:hover {
-                        background-color: #343434;
-                        backdrop-filter: blur(5px);
-                        cursor: pointer;
-                        color: rgb(255, 0, 0);
-                    }
-                }
-            }
-            .btns-groups {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                button {
-                    color: rgb(255, 255, 255);
-                    background-color: rgb(195, 0, 0);
-                }
-            }
-            span {
-                background-color: var(--bgw);
-                color: rgb(0, 0, 0);
-                width: 20px;
-                aspect-ratio: 1;
-                padding: 0 1rem;
-                border-radius: 2rem;
-                margin-left: 0.2rem;
+            li {
                 font-family: "Roboto Mono", monospace;
+                background-color: var(--bgw);
+                padding: 1rem 2rem;
+                border-radius: 0.5rem;
+                color: rgb(0, 0, 0);
+                transition: background-color 0.3s ease, color 0.3s ease;
+                &:hover {
+                    background-color: #343434;
+                    backdrop-filter: blur(5px);
+                    cursor: pointer;
+                    color: rgb(255, 0, 0);
+                }
             }
+        }
+        .btns-groups {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: auto;
+            /* Add this to float right */
+            button {
+                color: rgb(255, 255, 255);
+                background-color: rgb(195, 0, 0);
+            }
+        }
+        span {
+            background-color: var(--bgw);
+            color: rgb(0, 0, 0);
+            width: 20px;
+            aspect-ratio: 1;
+            padding: 0 1rem;
+            border-radius: 2rem;
+            margin-left: 0.2rem;
+            font-family: "Roboto Mono", monospace;
         }
     }
 }
@@ -129,19 +131,17 @@
     }
 }
 
-@media (max-width: 499px) {
-    .nav {
-        .btns-groups {
-            button {
-                display: none !important;
+@media (max-width: 400px) {
+    .header {
+        .container {
+            .logo {
+                display: none; // Hide names on smaller screens
             }
         }
-    }
-    .nav {
-        ul {
-            li {
-                width: 100%;
-            }
+        button {
+            margin-left: 160px;
+            align-items: end;
+            float: right;
         }
     }
 }
