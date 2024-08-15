@@ -36,6 +36,13 @@
                     cursor: pointer;
                     color: rgb(255, 0, 0);
                 }
+                a,
+                .react-scroll-link {
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    padding: 10px;
+                }
             }
         }
         .btns-groups {
@@ -43,7 +50,6 @@
             align-items: center;
             gap: 1rem;
             margin-left: auto;
-            /* Add this to float right */
             button {
                 color: rgb(255, 255, 255);
                 background-color: rgb(195, 0, 0);
@@ -132,7 +138,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 469px) {
     .header {
         .container {
             .logo2 {

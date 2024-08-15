@@ -29,12 +29,9 @@ const Header = () => {
         <div className={active ? `nav active` : `nav`}>
           <ul>
             {headerMenu.map((elem, index) => (
-              <li key={index}>
+              <li key={index} onClick={() => handleMenuClick(elem)}>
                 {elem.url ? (
-                  <a
-                    href={elem.url}
-                    onClick={() => handleMenuClick(elem)}
-                  >
+                  <a href={elem.url}>
                     {elem.name}
                   </a>
                 ) : (
@@ -42,7 +39,6 @@ const Header = () => {
                     to={elem.id}
                     smooth={true}
                     duration={500}
-                    onClick={() => handleMenuClick(elem)}
                   >
                     {elem.name}
                   </ScrollLink>
@@ -57,14 +53,14 @@ const Header = () => {
               onClick={() => setActive(false)}
             />
           </div>
-          <div
-            className={active ? `hamburger active` : `hamburger`}
-            onClick={() => setActive(!active)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        </div>
+        <div
+          className={active ? `hamburger active` : `hamburger`}
+          onClick={() => setActive(!active)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
