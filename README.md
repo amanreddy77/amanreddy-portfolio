@@ -1,3 +1,3 @@
 # Portfolio 
-demo https://amanreddy-portfolio.vercel.app/
+demo https://portfolio-aman-gamma.vercel.app/
 
