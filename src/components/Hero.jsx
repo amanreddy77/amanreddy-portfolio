@@ -3,9 +3,9 @@ import "./Hero.scss";
 import { SecondaryBtn } from "./Btn";
 
 const phrases = [
-  "Hi, my name is Aman, I'm a Web Developer!",
-  "Hi, my name is Aman, I'm a UI Designer!",
-  "Hi, my name is Aman, I'm a MERN Stack Developer!"
+  ["Hello, This is ", "Aman Reddy", ", I'm a Web Developer!"],
+  ["Hello, This is ", "Aman Reddy", ", I'm a UI Designer!"],
+  ["Hello, This is ", "Aman Reddy", ", I'm a MERN Stack Developer!"]
 ];
 
 const Hero = () => {
@@ -14,9 +14,9 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhrase((prev) => (prev + 1) % phrases.length);
-    }, 4000); // Change phrase every 4 seconds
+    },3950); // Change phrase every 4 seconds
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -28,7 +28,13 @@ const Hero = () => {
           </h1>
           <div className="text-desc">
             <p className="typing-effect">
-              {phrases[currentPhrase]}
+              {phrases[currentPhrase].map((part, index) => (
+                part === "Aman Reddy" ? (
+                  <span key={index} className="highlight">{part}</span>
+                ) : (
+                  part
+                )
+              ))}
             </p>
             <SecondaryBtn text={"Learn more"} onClick={() => { /* handle scroll */ }} classText="btn-s-90" />
           </div>
