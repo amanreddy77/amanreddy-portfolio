@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.scss";
 import CircleIcon from "./CircleIcon";
-import WhatsApp from "../images/IMG_20201224_101306_120.jpg"
+import doggy from "../images/doggy.png"
 
 
 const data = [
@@ -26,14 +26,14 @@ const data = [
 ];
 
 const About = () => {
-  const [index, setIndex] = useState(0);
+  
 
   const redirectToCertificate = (certificateUrl) => {
     const newTab = window.open(certificateUrl, "_blank");
     if (newTab) {
       newTab.focus();
     } else {
-      // Pop-up blocker detected, fallback to direct window location change
+     
       window.location.href = certificateUrl;
     }
   };
@@ -43,7 +43,7 @@ const About = () => {
       <div className="container">
         <div className="image">
           <img className="biopic"
-            src={WhatsApp}
+            src={doggy}
             alt="about image"
           />
         </div>
@@ -51,11 +51,11 @@ const About = () => {
           <span className="about-h">ABOUT</span>
           <div className="text-details">
             <h1>Skills and Technologies</h1>
-            <p>
+            <p className="skills">
               
-<pre style={{color: "red"}}>Programming Languages: </pre>c, Java, HTML, CSS, Python, Javascript, Artificial Intelligence, Data visualization, Data Analytics,SQL
+<pre style={{color: "red"}}>Programming Languages: </pre>C, JavaScript, HTML, CSS, Python, Artificial Intelligence, Data visualization, Data Analytics, SQL
 <pre style={{ color:"red" }}>Libraries/Frameworks:</pre> React.js, Node.js, Express.js, TailWind CSS, Saas, Next.js, Bootstrap, Firebase.
-<pre style={{ color:"red" }}>Tools / Platforms:</pre> Visual studio,kaali Linux, Streamlit, Langchain, llama, Figma.
+<pre style={{ color:"red" }}>Tools / Platforms:</pre> Visual studio, Docker, Streamlit, Langchain, llama, Figma.
 <pre style={{ color:"red" }}>Databases:</pre>MySQL, MongoDB.
             </p>
           </div>

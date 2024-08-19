@@ -18,6 +18,12 @@ const Hero = () => {
 
     return () => clearInterval(interval); 
   }, []);
+  const handleScroll = () => {
+    window.scrollBy({
+      top: 600, 
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section className="hero">
@@ -36,7 +42,7 @@ const Hero = () => {
                 )
               ))}
             </p>
-            <SecondaryBtn text={"Learn more"} onClick={() => { /* handle scroll */ }} classText="btn-s-90" />
+            <SecondaryBtn text={"Learn more"} onClick= { handleScroll } classText="btn-s-90" />
           </div>
         </div>
       </div>

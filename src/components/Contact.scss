@@ -15,9 +15,6 @@
             align-items: center;
             flex-direction: column;
             justify-content: space-evenly;
-            &:hover {
-                // background-color: rgb(163, 0, 0);
-            }
             span {
                 align-self: flex-start;
                 font-size: 2rem;
@@ -114,6 +111,7 @@
         }
         &-3 {
             display: grid;
+            cursor: pointer;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2rem;
             @media (max-width: 999px) {

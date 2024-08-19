@@ -13,7 +13,7 @@ const socialData = [
     },
     text: "Linkedin",
     desc: "You can connect me on LinkedIn and get to know about my Passion",
-    url: "https://www.linkedin.com/in/aman-reddy-pundru-272b53221/", // Replace with your LinkedIn URL
+    url: "https://www.linkedin.com/in/aman-reddy-pundru-272b53221/",
   },
   {
     icon: function () {
@@ -21,15 +21,15 @@ const socialData = [
     },
     text: "Github",
     desc: "If you wanna explore my projects and creativity just click here",
-    url: "https://github.com/amanreddy77", // Replace with your GitHub URL
+    url: "https://github.com/amanreddy77",
   },
   {
     icon: function () {
       return <AiOutlineInstagram />;
     },
     text: "Instagram",
-    desc: "Here you can go through my pictures and quotes which I hate 'hehe'",
-    url: "https://www.instagram.com/reddy_aman_77/", // Replace with your Instagram URL
+    desc: "Here you can go through my pictures and quotes which I hate",
+    url: "https://www.instagram.com/reddy_aman_77/",
   },
   {
     icon: function () {
@@ -37,7 +37,7 @@ const socialData = [
     },
     text: "Resume",
     desc: "Here's My Resume filled with my passion that leads my life",
-    url: "https://drive.google.com/file/d/1yACaNIdjn5eHaxHjqW5hxmARxG5TeXd5/view?usp=sharing", 
+    url: "https://drive.google.com/file/d/1yACaNIdjn5eHaxHjqW5hxmARxG5TeXd5/view?usp=sharing",
   },
 ];
 
@@ -62,14 +62,10 @@ const Contact = () => {
     emailjs
       .sendForm("service_qde1hol", "template_r573pza", event.target, "3qdcnh_91zAC7qEV8")
       .then((result) => {
-        window.alert("Email sent successfully", result.text);
-        setSnackMessage("Details sent successfully!"); // Set the snack message
-        setShowSnack(true); // Show the snack
-        setTimeout(() => {
-          setShowSnack(true); // Hide the snack after 3 seconds
-        }, 2000);
+        setSnackMessage("Details sent successfully!");
+        setShowSnack(true);
+        setTimeout(() => setShowSnack(false), 2000);
 
-        // Clear the form fields
         setFormData({
           name: "",
           email: "",
@@ -78,8 +74,16 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        
       });
+  };
+
+  const handleItemClick = (url) => {
+    const newTab = window.open(url, "_blank");
+    if (newTab) {
+      newTab.focus();
+    } else {
+      window.location.href = url;
+    }
   };
 
   return (
@@ -135,19 +139,19 @@ const Contact = () => {
 
       <div className="container-3">
         {socialData.map((elem, index) => (
-          <div className="item" key={index}>
+          <div
+            className="item"
+            key={index}
+            onClick={() => handleItemClick(elem.url)}
+          >
             <div className="upper">
               {elem.icon()}
               <SecondaryBtn
                 classText={"btn-s-45"}
                 text={""}
-                onClick={() => {
-                  const newTab = window.open(elem.url, "_blank");
-                  if (newTab) {
-                    newTab.focus();
-                  } else {
-                    window.location.href = elem.url;
-                  }
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent click event from bubbling up to parent
+                  handleItemClick(elem.url);
                 }}
               />
             </div>
@@ -159,7 +163,6 @@ const Contact = () => {
         ))}
       </div>
 
-    
       {showSnack && (
         <div className="snack">
           {snackMessage}
