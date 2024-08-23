@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.scss";
 import CircleIcon from "./CircleIcon";
-import doggy from "../images/doggy.png"
+import lastone from "../images/lastone.png"
 
 
 const data = [
@@ -43,7 +43,7 @@ const About = () => {
       <div className="container">
         <div className="image">
           <img className="biopic"
-            src={doggy}
+            src={lastone}
             alt="about image"
           />
         </div>

@@ -10,10 +10,10 @@ import aichat from '../images/aichat.png'
 
 const data = [
   {
-    text: "E-commerce site",
+    text: "Travel-Trips",
     tag: "Full-Stack",
     img: ecom,
-    url:"https://github.com/amanreddy77/e-commerse"
+    url:"https://github.com/amanreddy77/Trips-Travel"
   },
   {
     text: "Private Ai chatbot",
