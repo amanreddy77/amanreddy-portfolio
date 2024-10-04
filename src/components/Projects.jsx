@@ -3,12 +3,18 @@ import { SecondaryBtn } from "./Btn";
 import "./Projects.scss";
 import Dashboard from '../images/Dashboard.png';
 import ecom from '../images/ecom.png';
-import certi from '../images/certi.png';
+import doctor from '../images/doctor.png';
 // import ai from '../images/ai.png';
 import aichat from '../images/aichat.png'
 
 
 const data = [
+  {
+    text: "DoctorOnCall",
+    tag: "FULL-STACK",
+    img: doctor,
+    url:"https://github.com/amanreddy77/DoctorOnCall"
+  },
   {
     text: "Travel-Trips",
     tag: "Full-Stack",
@@ -28,12 +34,7 @@ const data = [
     img: Dashboard,
     url:"https://github.com/amanreddy77/dashboard-final"
   },
-  {
-    text: "Certificate Generator",
-    tag: "React-Saas",
-    img: certi,
-    url:"https://github.com/amanreddy77/certiGen1"
-  },
+  
 ];
 
 const redirectToGithub = () => {
